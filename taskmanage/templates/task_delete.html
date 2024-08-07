@@ -1,0 +1,18 @@
+{% extends "layouts.html" %}
+{% load static %}
+{% block title %}
+Task Form
+{% endblock %}
+
+{% block content %}
+<div class="modal-dialog modal-dialog-centered">
+    <h1 class="text-center mt-4">Are you sure that you want to delete the task?</h1>
+    <form method="post">
+        {% csrf_token %}
+        <div class="dbtn gap-3">
+            <button class="btn btn-danger">Delete</button>
+            <a class="btn btn-success" href="{% url 'task_list' %}">Cancle</a>
+        </div>
+    </form>
+</div>
+{% endblock %}

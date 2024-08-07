@@ -1,0 +1,21 @@
+{% extends "layouts.html" %}
+{% load static %}
+{% block title %}
+Task Form
+{% endblock %}
+
+{% load widget_tweaks %}
+{% block content %}
+<div class="dashboard1">
+    <div class=" card register">
+        <div class="card1">
+            <h2>Registraton Form</h2>
+            <form method="post">
+                {% csrf_token %}
+                {{form.as_p}}
+                <button class="btn btn-primary">Register</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

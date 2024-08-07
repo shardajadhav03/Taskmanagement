@@ -1,0 +1,185 @@
+{% extends "layouts.html" %}
+{% load static %}
+{% block title %}
+Task Management
+{% endblock %}
+
+{% block content %}
+<!-- <div class="dashboard2"> -->
+
+<div class=" c1">
+    <div class="dashboard2">
+        
+            <div class="container section">
+                <div class="row gx-5">
+                    <div class="col text-center">
+                        <div class="p-1.5">
+                            <h1 class="text-center mt-4">Welcome to Task Mangement System </h1>
+                            <p class="p1 text">Welcome to the Task Management System, your ultimate solution for staying
+                                organized and productive. Whether you're managing personal tasks or professional
+                                projects,
+                                our system is designed to help you prioritize, track, and complete your tasks
+                                efficiently.
+                                Enjoy a seamless and intuitive experience tailored to your needs.</p>
+                        </div>
+                        <a class="btn btn-primary mb-4 " href="{% url 'dashboard' %}">{% if user.is_authenticated%}Go to dashboard {% else %} Signup For Free {% endif %}</a>
+                    </div>
+                    <div class="col-md-6 p-0">
+                        <img src="{% static 'images/Designer (1).png' %}" class="img-fluid rounded img" alt="image">
+                    </div>
+                </div>
+            </div>
+
+    </div>
+
+    <div class="dashboard2 dashboard3">
+        <hr class="thin-line">
+       
+            <div class="container mt-2 section">
+                <div class="row gx-5 about">
+                    <div class="col">
+                        <div class="p-1.5">
+                            <h1 class="text-center mt-2 about1 p-2">ABOUT US</h1>
+                            <p class="p1 text1">
+                                At Task Management System, we believe in simplifying your life by helping you manage
+                                your
+                                tasks effectively. Our platform offers an intuitive interface for adding, editing, and
+                                organizing tasks. With features such as prioritization, due date tracking, and
+                                categorization, you can ensure nothing slips through the cracks.
+
+                            </p>
+
+                            <p class="p1">
+                                Our mission is to enhance your productivity by providing a reliable tool for all your
+                                task management needs. Whether you're managing personal tasks or professional projects,
+                                our system is designed to help you prioritize, track, and complete your tasks
+                                efficiently. Enjoy a seamless and intuitive experience tailored to your needs.
+                                <a class="btn btn-link p-0 read" href="{% url 'about'%}" role="button">
+                                    Read more >>
+                                </a>
+                            </p>
+
+
+                        </div>
+                    </div>
+                </div>
+        
+    </div>
+</div>
+<div class="dashboard2 dashboard4">
+    <hr class="thin-line">
+    
+        <div class="container mt-3 section">
+            <h2 class="mb-4">Frequently Asked Questions</h2>
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="accordion-item rounded my-2">
+                    <h2 class="accordion-header" id="flush-headingOne">
+                        <button class="accordion-button collapsed rounded" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            How do I create a new task?
+                        </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">To create a new task, click on the "Add Task" button, fill in the
+                            required details, and click "Save". Your task will be added to the list.</div>
+                    </div>
+                </div>
+                <div class="accordion-item rounded my-2">
+                    <h2 class="accordion-header" id="flush-headingTwo">
+                        <button class="accordion-button collapsed rounded" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            Can I categorize my tasks?
+                        </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Yes, you can categorize your tasks. When creating or editing a task,
+                            you
+                            can select a category from the provided options.</div>
+                    </div>
+                </div>
+                <div class="accordion-item rounded my-2">
+                    <h2 class="accordion-header" id="flush-headingThree">
+                        <button class="accordion-button collapsed rounded" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseThree" aria-expanded="false"
+                            aria-controls="flush-collapseThree">
+                            How can I edit or delete a task?
+                        </button>
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse"
+                        aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">To edit a task, click on the task you want to edit, make the
+                            necessary
+                            changes, and click "Save". To delete a task, click on the delete button next to the task and
+                            confirm the deletion.</div>
+                    </div>
+                </div>
+                <div class="accordion-item rounded my-2">
+                    <h2 class="accordion-header" id="flush-headingFour">
+                        <button class="accordion-button collapsed rounded" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseFour" aria-expanded="false"
+                            aria-controls="flush-collapseFour">
+                            How do I set priorities for my tasks?
+                        </button>
+                    </h2>
+                    <div id="flush-collapseFour" class="accordion-collapse collapse"
+                        aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">You can set priorities for your tasks by selecting the priority
+                            level
+                            when creating or editing a task. This helps you focus on the most important tasks first.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item rounded">
+                    <h2 class="accordion-header" id="flush-headingFive">
+                        <button class="accordion-button collapsed rounded" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseFive" aria-expanded="false"
+                            aria-controls="flush-collapseFive">
+                            What happens if I miss a task's due date?
+                        </button>
+                    </h2>
+                    <div id="flush-collapseFive" class="accordion-collapse collapse"
+                        aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">If you miss a task's due date, it will be marked as overdue. You can
+                            still complete the task, but it will be highlighted to remind you that it’s past due.</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Add more questions as needed -->
+        </div>
+   
+</div>
+
+<div class="dashboard2 dashboard5">
+<hr class="thin-line">
+
+    <div class="container section">
+        <div class="row gx-5 ">
+            <div class="col">
+                <div class="p-1.5">
+                    <h1 class="text-center mt-1 about1">CONTACT US </h1>
+                </div>
+            </div>
+            
+        </div>
+        <form>
+            <div class="centerform">
+                <div class="form-group">
+                    <label class="text1" for="exampleFormControlInput1">Email address</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                </div>
+    
+                <div class="form-group">
+                    <label class="text1" for="exampleFormControlTextarea1">Example textarea</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary my-2">Submit</button>
+            </div>
+        </form>
+    </div>
+   
+    
+</div>
+
+{% endblock %}

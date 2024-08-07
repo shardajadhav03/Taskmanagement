@@ -1,0 +1,4 @@
+calendar/calendar.json
+/node_modules
+/venv
+.env
