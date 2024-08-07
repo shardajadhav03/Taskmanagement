@@ -63,7 +63,7 @@
                         <button class="btn btn-outline-success" type="submit">Search</button>
                     </form>
                     {% if user.is_authenticated %}
-                    <form method="post" action="{% url 'home' %}">
+                    <form method="post" action="{% url 'logout' %}">
                         {% csrf_token %}
                         <button class="btn btn-danger mx-2" type="submit">Logout</button>
                     </form>
