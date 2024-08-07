@@ -166,7 +166,7 @@
                 var calendar = new FullCalendar.Calendar(calendarEl, {
                     initialView: 'dayGridMonth',
                     events: {
-                        url: '/api/task_events/',
+                        url: '/home/api/task_events/',
                         failure: function () {
                             alert('There was an error while fetching events.');
                         }
@@ -233,7 +233,7 @@
                 var taskId = button.getAttribute('data-task-id');
 
                 if (taskId) {
-                    deleteTaskForm.action = `/${taskId}/task_delete/`;
+                    deleteTaskForm.action = `/home/${taskId}/task_delete/`;
                 } else {
                     console.error('Task ID is null or undefined');
                 }
@@ -251,7 +251,7 @@
                 var taskId = button.getAttribute('data-task-id');
 
                 taskIdToDelete = taskId;
-                deleteTaskForm.action = `/${taskIdToDelete}/task_delete/`;
+                deleteTaskForm.action = `/home/${taskIdToDelete}/task_delete/`;
             });
         });
     </script>
